@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" >
+
+    <center>
+        <VBox spacing="10" VBox.vgrow="ALWAYS">
+        
+            <BorderPane>
+                <center>
+                    <Label fx:id="roomNameLabel" />
+                </center>
+                
+                <right>
+                    <Button text="Leave" onAction="#onLeaveButtonClick" />
+                </right>
+            </BorderPane>
+        
+            <ScrollPane fx:id="messagesScrollPane" 
+                        fitToWidth="true" 
+                        VBox.vgrow="ALWAYS"
+                        style="-fx-background-color: transparent;">
+                <VBox fx:id="messagesWrapper" />
+            </ScrollPane>
+            
+        </VBox>
+    </center>
+    
+    <bottom>
+        <BorderPane>
+            <center>
+                <TextField fx:id="messageTextField" promptText="enter message" onAction="#onSendButtonClick" />
+            </center>
+            
+            <right>
+                <Button text="Send" onAction="#onSendButtonClick" />
+            </right>
+        </BorderPane>
+    </bottom>
+
+</BorderPane>

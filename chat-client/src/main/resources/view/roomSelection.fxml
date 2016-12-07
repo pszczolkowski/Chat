@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml">
+
+    <center>
+
+        <VBox spacing="10" alignment="TOP_CENTER">
+
+            <BorderPane>
+                <center>
+                    <Label>Available rooms:</Label>
+                </center>
+
+                <right>
+                    <Button onAction="#onRefreshButtonClick"
+                            text="Refresh" />
+                </right>
+            </BorderPane>
+
+            <ListView fx:id="roomsListView" />
+
+            <Button fx:id="joinButton" 
+                    alignment="CENTER" 
+                    minWidth="200"
+                    onAction="#onJoinButtonClick" text="Join" />
+
+        </VBox>
+
+    </center>
+
+    <bottom>
+        <VBox spacing="10">
+        
+            <Separator />
+            
+            <BorderPane>
+                <center>
+                    <TextField fx:id="roomNameTextField"
+                               promptText="room name" 
+                               onAction="#onCreateButtonClick" />
+                </center>
+                
+                <right>
+                    <Button text="Create" onAction="#onCreateButtonClick" />
+                </right>
+            </BorderPane>
+        
+        </VBox>
+    </bottom>
+
+</BorderPane>
+

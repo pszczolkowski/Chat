@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<MenuBar xmlns:fx="http://javafx.com/fxml">
+
+    <fx:define>
+        <ToggleGroup fx:id="toggleGroup" />
+    </fx:define>
+
+    <Menu text="Protocol">
+        <items>
+            <RadioMenuItem fx:id="xmlRpcMenuItem"
+                           text="Xml-Rpc" 
+                           onAction="#onXmlRpcItemClick"
+                           toggleGroup="$toggleGroup" />
+                           
+            <RadioMenuItem fx:id="hessianMenuItem"
+                           text="Hessian" 
+                           onAction="#onHessianItemClick"
+                           toggleGroup="$toggleGroup" />
+                           
+            <RadioMenuItem fx:id="burlapMenuItem"
+                           text="Burlap" 
+                           onAction="#onBurlapcItemClick"
+                           toggleGroup="$toggleGroup" />
+        </items>
+    </Menu>
+
+</MenuBar>

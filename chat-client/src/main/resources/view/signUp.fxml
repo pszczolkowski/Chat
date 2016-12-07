@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" 
+       style="-fx-padding: 15px;">
+      
+    <center >
+    <VBox spacing="10" alignment="CENTER" maxWidth="300" >
+    
+        <TextField fx:id="nickTextField" promptText="nick" />
+    
+        <PasswordField fx:id="passwordField" promptText="password" onAction="#onSignUpButtonClick" />
+    
+        <PasswordField fx:id="confirmPasswordField" promptText="confirm password" onAction="#onSignUpButtonClick" />
+    
+        <Button text="Sign up" minWidth="200" onAction="#onSignUpButtonClick" />
+    
+        
+    
+        <HBox alignment="CENTER">
+            <Text>or </Text>
+            <Hyperlink onAction="#onSignInHyperlinkClick">sign in</Hyperlink>
+        </HBox>
+    </VBox>
+    
+    </center>
+    
+</BorderPane>
